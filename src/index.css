@@ -1,3 +1,7 @@
+html {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,48 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background: url('/img/books.jpg') no-repeat;
+  background-size: cover;
+  background-position: top center;
+  min-height: 100%;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+form {
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.btn {
+  background-color: #f55167;
+  transition: 0.2s ease-in-out;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #f55167;
+  border: 2px solid #f55167;
+}
+
+form button,
+form h5 {
+  margin: 20px 0;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-color: #f55167;
+  box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+input[type=password]:not(.browser-default):focus:not([readonly])+label {
+  color: #f55167 !important;
 }
